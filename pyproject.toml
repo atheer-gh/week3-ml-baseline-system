@@ -1,0 +1,24 @@
+[project]
+name = "week3-ml-baseline-system"
+version = "0.1.0"
+description = "ML Baseline System for AI Pros Bootcamp"
+dependencies = [
+    "typer>=0.15.1",
+    "pandas>=2.2.0",
+    "scikit-learn>=1.8.0",
+    "joblib>=1.5.3",
+]
+requires-python = ">=3.12"
+
+[project.scripts]
+ml-baseline = "ml_baseline.main:app"
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ml_baseline"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
